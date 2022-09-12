@@ -1,5 +1,7 @@
 <?php 
     require_once "module1.php";
+    $azerty = "add";
+    var_dump(is_email("adel.latibi@gmail.com"));
 ?>
 <!DOCTYPE html>
 <html lang="FR-fr">
