@@ -1,4 +1,5 @@
 <?php 
+    require_once "operations.php";
     // init
     $result=0;
     $op1=0;
