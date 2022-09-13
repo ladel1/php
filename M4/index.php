@@ -1,3 +1,8 @@
+<?php
+    $jours = [
+        "Lundi","Mardi","Mercredi","Jeudi","Vendredi","Dimanche"
+    ]
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +14,22 @@
 <body>
     <h1>Formulaire</h1>
     <form action="process.php" method="post">
-        <div class="form-controm">
+        <div class="form-control">
             <label for="">Firstname</label>
             <input type="text" name="firstname" id="">
         </div>
-        <div class="form-controm">
+        <div class="form-control">
             <label for="">Lastname</label>
             <input type="text" name="lastname" id="">
         </div>   
+        <div class="form-control">
+            <label for="">Day: </label>
+            <select name="day" id="">
+                <?php foreach($jours as $jour): ?>
+                    <option><?= $jour ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>         
         <button type="submit">Ajouter</button>     
     </form>
 </body>
