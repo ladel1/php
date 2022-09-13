@@ -1,8 +1,4 @@
-<?php
-    $jours = [
-        "Lundi","Mardi","Mercredi","Jeudi","Vendredi","Dimanche"
-    ]
-?>
+<?php require_once "process.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +9,14 @@
 </head>
 <body>
     <h1>Formulaire</h1>
-    <form action="process.php" method="post">
+    <form action="" method="post">
         <div class="form-control">
             <label for="">Firstname</label>
-            <input type="text" name="firstname" id="">
+            <input type="text" name="firstname" value="<?=$firstname?>" id="">
         </div>
         <div class="form-control">
             <label for="">Lastname</label>
-            <input type="text" name="lastname" id="">
+            <input type="text" value="<?=$lastname?>" name="lastname" id="">
         </div>   
         <div class="form-control">
             <label for="">Day: </label>
