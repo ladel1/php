@@ -1,7 +1,21 @@
-<?php 
+<?php
+
+
+use App\Classe\Personne;
+
+    require_once "classes/Etudiant.php";
     require_once "module1.php";
-    $azerty = "add";
-    var_dump(is_email("adel.latibi@gmail.com"));
+    require_once "exo1.php";
+
+        $p = new Personne("adel","latibi",29);
+    
+        var_dump($p);
+        $serial = serialize($p);
+        var_dump($serial);
+        $p2 = unserialize($serial);
+        var_dump($p2);
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="FR-fr">
