@@ -20,5 +20,6 @@
 <body>
     <h1>TP3</h1>
     <?=$form->getForm();?>
+    <?= htmlentities("<a>sdfsdf</a>") ?>
 </body>
 </html>
