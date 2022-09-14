@@ -8,7 +8,8 @@
     // add article
     $articleController = new ArticleController;
     $articleController->addArticle($_REQUEST);
-
+    // delete article
+    $articleController->deleteArticle($_REQUEST);
     // get articles
     define("SELECT_ARTICLES","SELECT * FROM articles");
     $results = $db->query(SELECT_ARTICLES)->fetchAll();
@@ -37,7 +38,8 @@
     </div>
 
     <?php foreach ($results as $key => $value): ?>
-        <p> <b><?=$value["titre"]?></b> <?=$value["contenu"]?> </p>
+        <p> <b><?=$value["titre"]?></b> <?=$value["contenu"]?> 
+        <form method="post"  > <button type="submit"  name="sup" value="<?=$value["id"]?>" >Supprimer</button> </form> </p>
     <?php endforeach; ?>
 </body>
 </html>
