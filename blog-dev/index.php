@@ -1,27 +1,6 @@
 <?php
-// Main
-use Config\Router;
-use Database\ConnectionProvider;
-
-require_once "__autoload__.php";
-$db = ConnectionProvider::getInstance()->getConnection();
-$content = Router::route();
+    // Main
+    use Root\Kernel;
+    require_once "__autoload__.php";
+    Kernel::boot();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Css -->
-    <!-- javascript -->
-    <!-- title -->
-    <title>Accueil</title>
-</head>
-<body>
-
-<?=$content ?>
-
-<!-- Javascript -->
-</body>
-</html>
