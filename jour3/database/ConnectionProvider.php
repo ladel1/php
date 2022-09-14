@@ -13,8 +13,9 @@
         private function __construct(){
             try{
                 $datas = ReadFile::readJson("database.json");
-                $dsn = $datas["url"].";dbname=".$datas["dbname"];                
-                $this->instancePDO = new \PDO($dsn,$datas["username"],$datas["password"]);                
+                $dsn = $datas["url"].";dbname=".$datas["dbname"]; 
+                $options = [\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"];               
+                $this->instancePDO = new \PDO($dsn,$datas["username"],$datas["password"],$options);                
             }catch(\PDOException $e){
                 echo "Error ".$e->getMessage();
             }
