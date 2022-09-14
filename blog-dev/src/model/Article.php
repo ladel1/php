@@ -4,11 +4,11 @@ namespace App\Model;
 
 class Article{
 
-    private $titre;
+    public $titre;
     private $contenu;
     private $auteur;
 
-    public function __construct($titre,$contenu,$auteur)
+    public function __construct($titre="",$contenu="",$auteur="")
     {
         $this->titre = $titre;        
         $this->contenu = $contenu;

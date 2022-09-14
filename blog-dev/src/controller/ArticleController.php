@@ -7,8 +7,6 @@ use App\Model\Article;
 
     class ArticleController extends AbstractController{
 
-
-
         public function addArticle($request){
 
            
@@ -20,6 +18,14 @@ use App\Model\Article;
 
             return $this->renderView("article/add-article");
         } 
+
+
+
+        public function getArticles(){
+            $articleCrud = new ArticleCRUD();
+            $articles = $articleCrud->selectAll();
+            return $this->renderView("article/articles",compact("articles"));
+        }
 
         public function deleteArticle($request){
            
