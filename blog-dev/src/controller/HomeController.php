@@ -8,7 +8,7 @@ class HomeController extends AbstractController{
 
     public function index(){
         $title = "xdcdvgbn,;:";
-        $this->renderView("home/index",[
+        return $this->renderView("home/index",[
             "title"=>$title,
             "name"=>"Adel"
         ]);        
