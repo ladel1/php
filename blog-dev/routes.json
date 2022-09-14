@@ -1,0 +1,4 @@
+{
+    "home":["App\\Controller\\HomeController","index"],
+    "add-article":["App\\Controller\\ArticleController","addArticle"]
+}
