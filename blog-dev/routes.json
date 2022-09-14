@@ -2,5 +2,6 @@
     "":["App\\Controller\\HomeController","index"],
     "home":["App\\Controller\\HomeController","index"],
     "add-article":["App\\Controller\\ArticleController","addArticle"],
-    "articles":["App\\Controller\\ArticleController","getArticles"]
+    "articles":["App\\Controller\\ArticleController","getArticles"],
+    "delete-article":["App\\Controller\\ArticleController","deleteArticle"]
 }
