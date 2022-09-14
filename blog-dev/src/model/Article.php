@@ -4,7 +4,7 @@ namespace App\Model;
 
 class Article{
 
-    public $titre;
+    private $titre;
     private $contenu;
     private $auteur;
 
@@ -14,7 +14,6 @@ class Article{
         $this->contenu = $contenu;
         $this->auteur = $auteur;        
     }
-
 
     /**
      * Get the value of titre

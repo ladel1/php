@@ -1,5 +1,5 @@
 <h1>Articles</h1>
 
 <?php foreach($articles as $val): ?>
-    <p> <?=  $val->titre ?> <?= $val->contenu ?> </p>
+    <p> <?=  $val->getTitre() ?> <?= $val->getContenu() ?> </p>
 <?php endforeach; ?>    

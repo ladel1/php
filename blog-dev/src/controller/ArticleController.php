@@ -23,7 +23,7 @@ use App\Model\Article;
 
         public function getArticles(){
             $articleCrud = new ArticleCRUD();
-            $articles = $articleCrud->selectAll();
+            $articles = $articleCrud->selectAll();         
             return $this->renderView("article/articles",compact("articles"));
         }
 

@@ -17,7 +17,7 @@
             define("SELECT_ARTICLES","SELECT * FROM articles");
             $stmt = $this->db->prepare(SELECT_ARTICLES);
             $stmt->execute();
-            return $stmt->fetchAll(\PDO::FETCH_CLASS);
+            return $stmt->fetchAll(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE,Article::class);
         }
 
     }
