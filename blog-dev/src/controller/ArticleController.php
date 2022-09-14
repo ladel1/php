@@ -2,23 +2,20 @@
 
     namespace App\Controller;
 
+use App\Crud\ArticleCRUD;
+use App\Model\Article;
+
     class ArticleController extends AbstractController{
 
-        private $db;
 
-        public function __construct()
-        {
-            $this->db = $GLOBALS["db"];
-        }
 
         public function addArticle($request){
 
            
             if(isset($request["titre"]) && isset($request["contenu"])){
-                define("INSERT_ARTICLE","INSERT INTO articles (titre,contenu,auteur) 
-                            VALUES ('{$request["titre"]}','{$request["contenu"]}',1);            
-                 ");
-                $rowcount = $this->db->exec(INSERT_ARTICLE);                
+                $article = new Article($request["titre"],$request["contenu"],1);
+                $articleCrud = new ArticleCRUD();
+                $articleCrud->insertArticle($article);              
             }
 
             return $this->renderView("article/add-article");
