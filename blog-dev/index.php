@@ -1,10 +1,11 @@
 <?php
 // Main
 use Config\Router;
+use Database\ConnectionProvider;
+
 require_once "__autoload__.php";
-//$db = ConnectionProvider::getInstance()->getConnection();
+$db = ConnectionProvider::getInstance()->getConnection();
 $content = Router::route();
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,7 @@ $content = Router::route();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css -->
     <!-- javascript -->
+    <!-- title -->
     <title>Accueil</title>
 </head>
 <body>

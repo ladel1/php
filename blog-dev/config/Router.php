@@ -11,7 +11,7 @@ use Helpers\ReadFile;
             $controlerName=$routes[$page][0];
             $methodName=$routes[$page][1];                
             $instanceController = new $controlerName();
-            return $instanceController->$methodName();
+            return $instanceController->$methodName($_REQUEST);
         }
 
     }
