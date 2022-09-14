@@ -2,10 +2,16 @@
 
 namespace App\Controller;
 
-class HomeController{
+use App\Controller\AbstractController;
+
+class HomeController extends AbstractController{
 
     public function index(){
-        echo "Salut je suis home";
+        $title = "xdcdvgbn,;:";
+        $this->renderView("home/index",[
+            "title"=>$title,
+            "name"=>"Adel"
+        ]);        
     }
 
 }
