@@ -5,11 +5,10 @@
 
     class Kernel{
 
-        public static function boot(){
-            $contextPath = "/php/api-server";        
-            $datas = Router::route();
-            
-            // echo 
+        public static function boot(){  
+            header('Access-Control-Allow-Origin: *');
+            header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, OPTIONS");     
+            echo Router::route();
         }
 
     }

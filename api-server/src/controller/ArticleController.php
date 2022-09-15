@@ -17,7 +17,7 @@
 
         public function getArticles(){
             $articles = CRUDFactory::getArticleCRUD()->selectAll();         
-            return $this->renderJson();
+            return $this->renderJson($articles);
         }
 
         public function deleteArticle($request){           

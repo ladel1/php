@@ -6,7 +6,7 @@
 
         protected function renderJson($datas=""){
             // convert to json 
-            return $datas;
+            return json_encode($datas);
         }
 
 

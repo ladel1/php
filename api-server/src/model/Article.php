@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Article{
+class Article implements \JsonSerializable{
 
     private $titre;
     private $contenu;
@@ -14,6 +14,13 @@ class Article{
         $this->contenu = $contenu;
         $this->auteur = $auteur;        
     }
+
+    public function jsonSerialize() // to upgrade
+    {
+        $vars = get_object_vars($this);
+
+        return $vars;
+    }      
 
     /**
      * Get the value of titre

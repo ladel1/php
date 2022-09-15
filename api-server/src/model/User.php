@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-class User{
+class User implements \JsonSerializable{
 
     private $id;
     private $prenom;
@@ -136,4 +136,11 @@ class User{
 
         return $this;
     }
+
+    public function jsonSerialize() // to upgrade
+    {
+        $vars = get_object_vars($this);
+
+        return $vars;
+    }    
 }
