@@ -15,11 +15,17 @@ class RegisterController extends AbstractController{
             isset($request["password"])
             ){
                 try{
+                    // validate fields
                     $nom = Validator::filterString($request["nom"],"Nom");
                     $prenom = Validator::filterString($request["prenom"],"Prenom");
                     $email = Validator::checkEmail($request["email"]);
                     $password = Validator::checkPassword($request["password"]);
-                }catch(\Exception $e){
+                    // create user object
+
+                    // insert user
+
+                    // redirect to login
+                }catch(Exception $e){
                     $error = $e->getMessage();
                 }
 

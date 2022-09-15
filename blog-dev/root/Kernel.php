@@ -6,8 +6,8 @@
     class Kernel{
 
         public static function boot(){
+            $contextPath = "/php/blog-dev";        
             $datas = Router::route();
-            $contextPath = "/php/blog-dev";
             extract($datas);
             require_once "src/view/base.php";
         }

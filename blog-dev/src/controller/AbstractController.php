@@ -3,7 +3,6 @@
     namespace App\Controller;
     abstract class AbstractController{
 
-
         private function extractCssNJs(&$html){
             $css=$js="";
             $patternCSS = "/<css>(.*)<\/css>/ms";
