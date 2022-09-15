@@ -1,0 +1,23 @@
+
+.main-bg {
+    background: #009688!important;
+  }
+
+input:focus, button:focus {
+    border: 1px solid #009688 !important;
+    box-shadow: none !important;
+  }
+  
+.form-check-input:checked {
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+}
+s
+.card, .btn, input{
+    border-radius:0 !important;
+}
+.errors {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}  

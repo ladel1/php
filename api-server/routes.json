@@ -1,0 +1,11 @@
+{
+    "":["App\\Controller\\HomeController","index"],
+    "home":["App\\Controller\\HomeController","index"],
+    "add-article":["App\\Controller\\ArticleController","addArticle","guard"],
+    "articles":["App\\Controller\\ArticleController","getArticles"],
+    "delete-article":["App\\Controller\\ArticleController","deleteArticle","guard"],
+    "register":["App\\Controller\\RegisterController","addUser"],
+    "login":["App\\Controller\\LoginController","login"],
+    "dashboard":["App\\Controller\\DashboardController","index","guard"]
+
+}

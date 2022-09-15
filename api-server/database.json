@@ -1,0 +1,6 @@
+ {
+    "url":"mysql:host=localhost",
+    "username":"root",
+    "password":"",
+    "dbname":"eni_blog"
+ }
