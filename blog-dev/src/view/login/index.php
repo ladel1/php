@@ -8,7 +8,7 @@
             <h2 class="p-3">Connexion</h2>
           </div>
           <div class="card-body">
-            <form>
+            <form action="login" method="post">
               <div class="mb-4">
                 <label for="email" class="form-label">Email</label>
                 <input type="text" class="form-control" name="email" id="email" />

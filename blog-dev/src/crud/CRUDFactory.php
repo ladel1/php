@@ -10,5 +10,9 @@
             return new ArticleCRUD();
         } 
 
+        public static function getUserCRUD(){
+            return new UserCRUD();
+        }         
+
 
     }
