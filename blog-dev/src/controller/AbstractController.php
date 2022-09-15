@@ -1,8 +1,20 @@
 <?php 
 
     namespace App\Controller;
+
+use Config\Session;
+
     abstract class AbstractController{
 
+        private $session;
+
+        public function __construct()
+        {
+            $this->session = Session::getInstance();
+        }
+
+        
+  
         private function extractCssNJs(&$html){
             $css=$js="";
             $patternCSS = "/<css>(.*)<\/css>/ms";
@@ -37,4 +49,16 @@
             return $datas;
         }
 
+
+        protected function redirect($link){
+            header("Location:$link");
+        }
+
+        /**
+         * Get the value of session
+         */
+        protected function session()
+        {
+            return $this->session;
+        }
     }
